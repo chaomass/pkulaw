@@ -7,18 +7,14 @@
 	  		<h2>关键字【{{keywords}}】的搜索结果<small>共{{page_info['total_rows']}}记录</small></h2>
 			  	<table class="table table-striped">
 			  	<tr>
-			  		<th width="10%">提交时间</th>
 			  		<th>标题</th>
-			  		<th width="15%">漏洞类型</th>
-			  		<th width="10%">提交者</th>
+			  		<th>文号</th>
 			  	</tr>
 			  	{% for row in page_info['rows'] %}
 			  	<tr>
-			  		<td>{{row['datetime']}}</td>
 			  		<td><a href="pnfl/{{row['gid']}}" target="_blank">
 			  			{{row['title']}}</a></td>
-			  		<td><a href="http://www.wooyun.org/bugs/{{row['wooyun_id']}}" target="_blank">{{row['bug_type']}}</a></td>
-			  		<td>{{row['author']}}</td>
+			  		<td><a href="http://www.wooyun.org/bugs/{{row['wooyun_id']}}" target="_blank">{{row['uid']}}</a></td>
 			  	</tr>
 			  	{% endfor %}
 				</table>
